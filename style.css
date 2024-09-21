@@ -216,11 +216,11 @@ section {
 
 .more-details {
     text-decoration: none;
-    color: #E8D08F;
+    color: #7D91B0;
 }
 
 .more-details:hover {
-    color: #7D91B0;
+    color: #E8D08F;
 }
 
 .contact .icon{
