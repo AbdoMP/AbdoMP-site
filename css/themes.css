@@ -1,0 +1,203 @@
+/* ==========================================================================
+   THEMES — 2 portfolio modes × 2 color schemes
+   data-mode="eng|media"  ·  data-theme="dark|light"   (set on <html>)
+   Palette 01 → Engineering (navy / cyan / green)
+   Palette 02 → Multimedia  (ink / cyan / pink)
+   ========================================================================== */
+
+:root {
+  /* Brand constants */
+  --brand-navy: #0B2343;
+  --brand-ink: #0F1B2D;
+  --brand-cloud: #ECF0F1;
+  --brand-snow: #F7F8FA;
+  --brand-cyan: #00B4D8;
+  --brand-green: #00CC66;
+  --brand-pink: #FF0A78;
+
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: "Space Grotesk", var(--font-body);
+}
+
+/* ---------- Engineering · Dark (default) ---------- */
+:root,
+[data-mode="eng"][data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #061a33;
+  --bg-2: #0a2242;
+  --surface: rgba(16, 44, 82, 0.55);
+  --surface-solid: #0e2a4f;
+  --surface-2: #133663;
+  --border: rgba(0, 180, 216, 0.16);
+  --border-strong: rgba(0, 180, 216, 0.35);
+  --text: #ECF0F1;
+  --text-muted: #9fb4cb;
+  --text-faint: #6c84a0;
+  --primary: #00B4D8;
+  --accent: #00CC66;
+  --accent-contrast: #032013;
+  --accent-soft: rgba(0, 204, 102, 0.14);
+  --primary-soft: rgba(0, 180, 216, 0.14);
+  --grad: linear-gradient(135deg, #00B4D8 0%, #00CC66 100%);
+  --glow: 0 0 0 1px rgba(0, 204, 102, .35), 0 18px 50px -12px rgba(0, 204, 102, .35);
+  --shadow: 0 20px 50px -20px rgba(0, 0, 0, .6);
+  --header-bg: rgba(6, 26, 51, 0.72);
+}
+
+/* ---------- Engineering · Light ---------- */
+[data-mode="eng"][data-theme="light"] {
+  color-scheme: light;
+  --bg: #ECF0F1;
+  --bg-2: #e2e8eb;
+  --surface: rgba(255, 255, 255, 0.75);
+  --surface-solid: #ffffff;
+  --surface-2: #f4f7f8;
+  --border: rgba(11, 35, 67, 0.12);
+  --border-strong: rgba(11, 35, 67, 0.25);
+  --text: #0B2343;
+  --text-muted: #45607d;
+  --text-faint: #7a8ea5;
+  --primary: #0089a8;
+  --accent: #00a352;
+  --accent-contrast: #ffffff;
+  --accent-soft: rgba(0, 163, 82, 0.12);
+  --primary-soft: rgba(0, 137, 168, 0.10);
+  --grad: linear-gradient(135deg, #0096b8 0%, #00b35a 100%);
+  --glow: 0 0 0 1px rgba(0, 163, 82, .3), 0 18px 40px -14px rgba(0, 120, 70, .35);
+  --shadow: 0 18px 40px -22px rgba(11, 35, 67, .35);
+  --header-bg: rgba(236, 240, 241, 0.78);
+}
+
+/* ---------- Multimedia · Dark ---------- */
+[data-mode="media"][data-theme="dark"] {
+  color-scheme: dark;
+  --font-display: "Syne", var(--font-body);
+  --bg: #0b1422;
+  --bg-2: #101c2e;
+  --surface: rgba(24, 38, 60, 0.55);
+  --surface-solid: #142238;
+  --surface-2: #1b2c46;
+  --border: rgba(255, 10, 120, 0.16);
+  --border-strong: rgba(255, 10, 120, 0.38);
+  --text: #F7F8FA;
+  --text-muted: #a7b2c4;
+  --text-faint: #717e93;
+  --primary: #00B4D8;
+  --accent: #FF0A78;
+  --accent-contrast: #ffffff;
+  --accent-soft: rgba(255, 10, 120, 0.14);
+  --primary-soft: rgba(0, 180, 216, 0.14);
+  --grad: linear-gradient(135deg, #FF0A78 0%, #00B4D8 100%);
+  --glow: 0 0 0 1px rgba(255, 10, 120, .4), 0 18px 50px -12px rgba(255, 10, 120, .4);
+  --shadow: 0 20px 50px -20px rgba(0, 0, 0, .65);
+  --header-bg: rgba(11, 20, 34, 0.72);
+}
+
+/* ---------- Multimedia · Light ---------- */
+[data-mode="media"][data-theme="light"] {
+  color-scheme: light;
+  --font-display: "Syne", var(--font-body);
+  --bg: #F7F8FA;
+  --bg-2: #eef0f4;
+  --surface: rgba(255, 255, 255, 0.8);
+  --surface-solid: #ffffff;
+  --surface-2: #f1f3f7;
+  --border: rgba(15, 27, 45, 0.10);
+  --border-strong: rgba(15, 27, 45, 0.22);
+  --text: #0F1B2D;
+  --text-muted: #4b5870;
+  --text-faint: #8590a3;
+  --primary: #0089a8;
+  --accent: #e5006b;
+  --accent-contrast: #ffffff;
+  --accent-soft: rgba(229, 0, 107, 0.10);
+  --primary-soft: rgba(0, 137, 168, 0.10);
+  --grad: linear-gradient(135deg, #e5006b 0%, #0096b8 100%);
+  --glow: 0 0 0 1px rgba(229, 0, 107, .3), 0 18px 40px -14px rgba(229, 0, 107, .35);
+  --shadow: 0 18px 40px -22px rgba(15, 27, 45, .3);
+  --header-bg: rgba(247, 248, 250, 0.8);
+}
+
+[data-mode="media"] { --font-display: "Syne", var(--font-body); }
+
+/* ==========================================================================
+   Background personality layers
+   ========================================================================== */
+.bg-fx {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background: var(--bg);
+  transition: background-color .5s ease;
+}
+
+.bg-fx__layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .8s ease;
+}
+
+/* Engineering: grid + circuit traces */
+.bg-fx__eng {
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, #000 30%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, #000 30%, transparent 85%);
+}
+.bg-fx__eng svg { position: absolute; width: 100%; height: 100%; opacity: .55; }
+.bg-fx__eng .trace { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 6 600; animation: trace 9s linear infinite; }
+.bg-fx__eng .trace:nth-child(2) { stroke: var(--primary); animation-delay: -3s; animation-duration: 11s; }
+.bg-fx__eng .trace:nth-child(3) { animation-delay: -6s; animation-duration: 13s; }
+.bg-fx__eng .trace:nth-child(4) { stroke: var(--primary); animation-delay: -1s; animation-duration: 10s; }
+.bg-fx__eng .trace-static { fill: none; stroke: var(--border); stroke-width: 1.2; }
+.bg-fx__eng .node { fill: var(--accent); opacity: .5; }
+
+@keyframes trace { to { stroke-dashoffset: -606; } }
+
+/* Multimedia: gradient blobs */
+.bg-fx__media .blob {
+  position: absolute;
+  width: 46vmax;
+  height: 46vmax;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .32;
+  animation: float 22s ease-in-out infinite alternate;
+}
+[data-theme="light"] .bg-fx__media .blob { opacity: .22; }
+.bg-fx__media .blob--1 { background: var(--brand-pink); top: -12vmax; left: -10vmax; }
+.bg-fx__media .blob--2 { background: var(--brand-cyan); bottom: -18vmax; right: -12vmax; animation-delay: -8s; }
+.bg-fx__media .blob--3 { background: #7b2cff; top: 35%; left: 45%; width: 30vmax; height: 30vmax; opacity: .18; animation-delay: -14s; }
+.bg-fx__media .grain {
+  position: absolute; inset: 0; opacity: .06; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes float {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(8vmax, 6vmax) scale(1.12); }
+  100% { transform: translate(-6vmax, 10vmax) scale(.92); }
+}
+
+[data-mode="eng"] .bg-fx__eng { opacity: 1; }
+[data-mode="media"] .bg-fx__media { opacity: 1; }
+
+/* ==========================================================================
+   Mode / theme transition (View Transitions API)
+   ========================================================================== */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) { z-index: 2; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-fx__eng .trace, .bg-fx__media .blob { animation: none; }
+}

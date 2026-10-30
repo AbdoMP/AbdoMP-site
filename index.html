@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="eng" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdulrahman Muhammed — Electrical Engineer &amp; Multimedia Designer</title>
+  <meta name="description" content="Dual portfolio of Abdulrahman Muhammed showcasing Electrical Engineering (Embedded Systems, Hardware, IoT) and Multimedia Design (Brand Identities, Video, Motion Graphics).">
+  <meta name="theme-color" content="#061a33">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Abdulrahman Muhammed — Dual Portfolio">
+  <meta property="og:description" content="Showcasing Electrical Engineering and Multimedia Design projects with seamless mode toggling.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero.jpg">
+
+  <!-- Google Fonts: Space Grotesk, Syne, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script>
+    // Inline early theme & mode hydration to prevent flash of wrong colors
+    (function() {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlMode = urlParams.get('mode');
+        const savedMode = localStorage.getItem('am-mode');
+        const mode = (urlMode === 'eng' || urlMode === 'media') ? urlMode : (savedMode || 'eng');
+        document.documentElement.dataset.mode = mode;
+
+        const savedTheme = localStorage.getItem('am-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.dataset.theme = savedTheme;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.dataset.theme = 'light';
+        } else {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Animated background fx layer -->
+  <div id="bg-fx-container"></div>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <!-- Hero / Intro Section -->
+    <section class="hero" id="hero"></section>
+
+    <!-- Big Portfolio Mode Switch (right after intro) -->
+    <section class="section" id="switch-container" style="padding-top: 0; padding-bottom: 2rem;"></section>
+
+    <!-- Projects Grid Section -->
+    <section class="section" id="work"></section>
+
+    <!-- About & Skills Section (dynamic per mode) -->
+    <section class="section" id="about"></section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact"></section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <!-- Page script module -->
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>

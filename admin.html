@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="eng" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Console — Abdulrahman Muhammed</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#061a33">
+
+  <!-- Google Fonts: Space Grotesk, Syne, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('am-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Background animation layer -->
+  <div id="bg-fx-container"></div>
+
+  <!-- Site Header -->
+  <header class="site-header" id="site-header"></header>
+
+  <!-- Main Content (Swapped between Login and Admin View) -->
+  <main id="main"></main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <!-- Admin script module -->
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

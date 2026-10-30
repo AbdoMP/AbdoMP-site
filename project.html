@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="eng" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details — Abdulrahman Muhammed</title>
+  <meta name="description" content="Detailed engineering and multimedia project case study.">
+  <meta name="theme-color" content="#061a33">
+
+  <!-- Google Fonts: Space Grotesk, Syne, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/project.css">
+
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('am-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.dataset.theme = savedTheme;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.dataset.theme = 'light';
+        } else {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Animated background fx layer -->
+  <div id="bg-fx-container"></div>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <!-- Project Hero Header -->
+    <header class="p-hero" id="p-hero"></header>
+
+    <!-- Project Layout: Main body + Aside metadata/links -->
+    <div id="p-layout"></div>
+
+    <!-- Recommendations from the other field -->
+    <section class="section" id="p-recommendations" style="padding-top: 0;"></section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <!-- Page script module -->
+  <script type="module" src="js/project.js"></script>
+</body>
+</html>

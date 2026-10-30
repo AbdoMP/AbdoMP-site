@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-30T16:00:00.000Z",
+  "settings": {
+    "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9"
+  },
+  "content": {
+    "name": "Abdulrahman Muhammed",
+    "hero": {
+      "greeting": "Hi, I'm",
+      "tagline": "Electrical Engineer & Multimedia Designer",
+      "intro": "I design circuits that think and visuals that speak. From embedded firmware and power systems to brand identities and cinematic edits — I build things at the intersection of logic and creativity.",
+      "photo": "assets/hero.jpg",
+      "location": "Cairo, Egypt",
+      "available": true
+    },
+    "email": "hello@example.com",
+    "socials": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/", "icon": "linkedin" },
+      { "label": "GitHub", "url": "https://github.com/", "icon": "github" },
+      { "label": "Behance", "url": "https://www.behance.net/", "icon": "behance" },
+      { "label": "Instagram", "url": "https://www.instagram.com/", "icon": "instagram" },
+      { "label": "YouTube", "url": "https://www.youtube.com/", "icon": "youtube" }
+    ],
+    "modes": {
+      "eng": {
+        "label": "Engineering",
+        "short": "Embedded · Code · Systems",
+        "cvUrl": "https://drive.google.com/file/d/ENGINEERING_CV_ID/view",
+        "projectsTitle": "Engineering Projects",
+        "projectsSubtitle": "Embedded systems, firmware, power electronics and system design — built, tested and documented.",
+        "aboutTitle": "The Engineer",
+        "about": "I'm an electrical engineer who loves the moment a board powers up for the first time. My work spans **embedded systems**, **PCB design**, **power electronics** and **control**, with a strong focus on clean, well-documented firmware.\n\nI enjoy taking a product from a napkin sketch through schematic, layout, firmware and testing — and making sure it's reliable in the real world.",
+        "skills": [
+          { "group": "Embedded", "items": ["C / C++", "STM32", "ESP32", "FreeRTOS", "Arduino", "UART · SPI · I²C · CAN"] },
+          { "group": "Hardware", "items": ["KiCad", "Altium", "PCB Layout", "Power Electronics", "Oscilloscope & Logic Analysis"] },
+          { "group": "Software & Systems", "items": ["Python", "MATLAB / Simulink", "Verilog", "Git", "Linux", "System Architecture"] }
+        ],
+        "stats": [
+          { "value": "20+", "label": "Boards designed" },
+          { "value": "15+", "label": "Firmware projects" },
+          { "value": "5", "label": "Years building" }
+        ]
+      },
+      "media": {
+        "label": "Multimedia",
+        "short": "Video · Brand · Media",
+        "cvUrl": "https://drive.google.com/file/d/MULTIMEDIA_CV_ID/view",
+        "projectsTitle": "Multimedia Projects",
+        "projectsSubtitle": "Brand identities, films, motion graphics and media campaigns — crafted with intent.",
+        "aboutTitle": "The Creative",
+        "about": "On the other side of my brain lives a designer and storyteller. I build **brand identities** that feel inevitable, cut **videos** with rhythm, and design **motion** that makes people stop scrolling.\n\nMy engineering background shapes how I design: systematic, detail-obsessed, and always grounded in a clear purpose.",
+        "skills": [
+          { "group": "Design", "items": ["Brand Identity", "Logo Design", "Typography", "Illustrator", "Photoshop", "Figma"] },
+          { "group": "Video & Motion", "items": ["Premiere Pro", "DaVinci Resolve", "After Effects", "Color Grading", "Sound Design"] },
+          { "group": "Media", "items": ["Art Direction", "Social Campaigns", "Photography", "Storyboarding", "Content Strategy"] }
+        ],
+        "stats": [
+          { "value": "30+", "label": "Brands crafted" },
+          { "value": "50+", "label": "Videos delivered" },
+          { "value": "1M+", "label": "Views generated" }
+        ]
+      }
+    }
+  },
+  "projects": [
+    {
+      "id": "smart-energy-monitor",
+      "field": "eng",
+      "title": "Smart Home Energy Monitor",
+      "thumbnail": "assets/projects/eng-energy-monitor.jpg",
+      "tags": ["Embedded", "ESP32", "IoT", "PCB Design"],
+      "summary": "A Wi-Fi energy monitor that measures real-time power per circuit and streams it to a live dashboard with usage alerts.",
+      "description": "## Overview\nHousehold energy bills are a black box. This device clips onto the main panel using **non-invasive CT sensors** and reports real power, apparent power and power factor for up to 4 circuits.\n\n## Highlights\n- Custom 2-layer PCB designed in **KiCad** with isolated analog front-end\n- ESP32 firmware written in **C++ / FreeRTOS**, sampling at 4 kHz per channel\n- MQTT telemetry to a self-hosted dashboard with daily/weekly reports\n- Calibrated to **±1.5%** against a reference meter\n\n## Tech stack\n`ESP32` `FreeRTOS` `MQTT` `KiCad` `Grafana`\n\n> The biggest lesson: good analog layout matters more than clever code.",
+      "steps": [
+        { "title": "Research & requirements", "text": "Defined accuracy targets, safety constraints and chose CT sensors over shunts for isolation." },
+        { "title": "Schematic & PCB", "text": "Designed the analog front-end with burden resistors, bias network and anti-aliasing filters; routed a compact 2-layer board." },
+        { "title": "Firmware", "text": "Implemented DMA-based ADC sampling, RMS computation and a FreeRTOS task for MQTT publishing." },
+        { "title": "Calibration & testing", "text": "Calibrated each channel against a reference meter and stress-tested for 30 days of continuous operation." }
+      ],
+      "gallery": [
+        { "url": "assets/projects/eng-energy-monitor.jpg", "caption": "Assembled prototype in its 3D-printed enclosure" },
+        { "url": "assets/projects/eng-bench.jpg", "caption": "Validating the analog front-end on the bench" }
+      ],
+      "links": [
+        { "label": "Source code on GitHub", "url": "https://github.com/" },
+        { "label": "ESP32 Technical Reference", "url": "https://www.espressif.com/en/products/socs/esp32" }
+      ],
+      "published": true,
+      "date": "2026-06"
+    },
+    {
+      "id": "pid-line-follower",
+      "field": "eng",
+      "title": "PID Line-Following Robot",
+      "thumbnail": "assets/projects/eng-line-robot.svg",
+      "tags": ["Embedded", "STM32", "Control Systems", "Robotics"],
+      "summary": "A high-speed line-following robot using an 8-channel IR array and a tuned PID controller running on an STM32.",
+      "description": "## Overview\nBuilt for a university robotics competition, this robot follows a track at **1.8 m/s** using a weighted IR-sensor position estimate and a discrete PID loop running at 1 kHz.\n\n## Highlights\n- Bare-metal **STM32F4** firmware using HAL + timer interrupts\n- Custom motor driver board with current sensing\n- Bluetooth live tuning of **Kp, Ki, Kd** from a phone\n- Placed **2nd** out of 24 teams\n\n```c\nerror = position - SETPOINT;\nintegral += error * dt;\noutput = Kp*error + Ki*integral + Kd*(error - prev)/dt;\n```",
+      "steps": [
+        { "title": "Mechanical design", "text": "Lightweight chassis with low center of gravity and N20 micro-gear motors." },
+        { "title": "Sensor array", "text": "Designed an 8-channel IR reflectance board and normalized readings on startup." },
+        { "title": "Control loop", "text": "Implemented and tuned a PID controller with anti-windup and derivative filtering." },
+        { "title": "Competition", "text": "Iterated on tuning at the venue and finished second overall." }
+      ],
+      "gallery": [
+        { "url": "assets/projects/eng-line-robot.svg", "caption": "System illustration" },
+        { "url": "assets/projects/eng-bench.jpg", "caption": "Testing motor driver waveforms" }
+      ],
+      "links": [
+        { "label": "Firmware repository", "url": "https://github.com/" }
+      ],
+      "published": true,
+      "date": "2026-03"
+    },
+    {
+      "id": "solar-mppt-controller",
+      "field": "eng",
+      "title": "Solar MPPT Charge Controller",
+      "thumbnail": "assets/projects/eng-mppt.svg",
+      "tags": ["Power Electronics", "MATLAB", "System Design", "PCB Design"],
+      "summary": "A 200 W synchronous buck MPPT charge controller with a Perturb & Observe algorithm, simulated in Simulink and built on a custom PCB.",
+      "description": "## Overview\nA maximum-power-point-tracking charge controller for 12 V lead-acid and LiFePO₄ batteries, designed from first principles.\n\n## Highlights\n- Full system modeled in **MATLAB / Simulink** before hardware\n- Synchronous buck topology at **100 kHz**, peak efficiency **96.4%**\n- Perturb & Observe MPPT with adaptive step size\n- 3-stage charging profile with temperature compensation\n\n## Results\n| Metric | Value |\n|---|---|\n| Max power | 200 W |\n| Efficiency | 96.4% |\n| Tracking accuracy | 99.1% |",
+      "steps": [
+        { "title": "Simulation", "text": "Modeled PV panel, converter and battery in Simulink to size components and validate the algorithm." },
+        { "title": "Power stage design", "text": "Selected MOSFETs, inductor and capacitors for low loss; designed thermal management." },
+        { "title": "Control firmware", "text": "Implemented P&O MPPT and charge state machine on a microcontroller." },
+        { "title": "Testing", "text": "Measured efficiency curves and tracking accuracy under real sun and a PV simulator." }
+      ],
+      "gallery": [
+        { "url": "assets/projects/eng-mppt.svg", "caption": "P–V curve and maximum power point" },
+        { "url": "assets/projects/eng-bench.jpg", "caption": "Efficiency measurements" }
+      ],
+      "links": [
+        { "label": "Simulation files", "url": "https://github.com/" }
+      ],
+      "published": true,
+      "date": "2025-11"
+    },
+    {
+      "id": "fpga-logic-analyzer",
+      "field": "eng",
+      "title": "Portable FPGA Logic Analyzer",
+      "thumbnail": "assets/projects/eng-fpga.svg",
+      "tags": ["FPGA", "Verilog", "Coding", "Python"],
+      "summary": "An 8-channel, 200 MS/s logic analyzer built on an FPGA with a Python desktop app for capture, triggering and protocol decoding.",
+      "description": "## Overview\nCommercial logic analyzers are expensive; this one costs under $40 in parts and decodes **UART, SPI and I²C** out of the box.\n\n## Highlights\n- Capture engine written in **Verilog** with configurable triggers\n- High-speed USB transfer to a **Python / PyQt** desktop app\n- Protocol decoders with an extensible plugin system\n\n## What I learned\nTiming closure, clock-domain crossing and designing for testability.",
+      "steps": [
+        { "title": "Architecture", "text": "Defined sample buffer, trigger unit and USB bridge as separate FPGA modules." },
+        { "title": "HDL development", "text": "Wrote and simulated the Verilog modules with testbenches." },
+        { "title": "Desktop software", "text": "Built the Python capture app with waveform view and decoders." }
+      ],
+      "gallery": [
+        { "url": "assets/projects/eng-fpga.svg", "caption": "Capture architecture & timing diagram" }
+      ],
+      "links": [
+        { "label": "HDL & app source", "url": "https://github.com/" }
+      ],
+      "published": true,
+      "date": "2025-07"
+    },
+    {
+      "id": "nebula-coffee-identity",
+      "field": "media",
+      "title": "Nebula Coffee — Brand Identity",
+      "thumbnail": "assets/projects/media-nebula.jpg",
+      "tags": ["Brand Identity", "Logo Design", "Packaging"],
+      "summary": "A cosmic, premium identity for a specialty coffee roaster — logo, palette, packaging and a full brand guideline.",
+      "description": "## The brief\nNebula wanted to stand out on crowded specialty shelves while feeling **premium, curious and warm**.\n\n## The solution\nA spiral galaxy mark that doubles as a coffee swirl, paired with a deep navy base and electric pink accents. The system scales from stickers to 1 kg bags.\n\n## Deliverables\n- Logo suite & construction grid\n- Color & typography system\n- Packaging, cups, business cards\n- 40-page brand guideline",
+      "steps": [
+        { "title": "Discovery", "text": "Workshops with the founders to define brand values and audience." },
+        { "title": "Concepts", "text": "Explored three directions; the cosmic route won for memorability." },
+        { "title": "Refinement", "text": "Built the construction grid, palette and type hierarchy." },
+        { "title": "Rollout", "text": "Designed packaging and printed collateral; delivered guidelines." }
+      ],
+      "gallery": [
+        { "url": "assets/projects/media-nebula.jpg", "caption": "Packaging & collateral" },
+        { "url": "assets/projects/media-guidelines.jpg", "caption": "Brand guidelines" }
+      ],
+      "links": [
+        { "label": "Full case study on Behance", "url": "https://www.behance.net/" }
+      ],
+      "published": true,
+      "date": "2026-05"
+    },
+    {
+      "id": "echoes-short-film",
+      "field": "media",
+      "title": "Echoes — Short Film",
+      "thumbnail": "assets/projects/media-echoes.jpg",
+      "tags": ["Video", "Editing", "Color Grading"],
+      "summary": "A neon-noir short film about memory and the city — edited, color graded and sound designed end to end.",
+      "description": "## Overview\n*Echoes* follows a man retracing a single night across a rain-soaked city. I handled **editing, color grading and sound design**.\n\n## Approach\n- Rhythm-driven edit built around the score\n- A teal/magenta grade inspired by neon-noir cinema\n- Layered ambiences to make the city feel alive\n\n## Recognition\nOfficial selection at two regional short film festivals.",
+      "steps": [
+        { "title": "Pre-production", "text": "Storyboards, shot list and look references with the director." },
+        { "title": "Edit", "text": "Assembled, refined and locked the cut in Premiere Pro." },
+        { "title": "Color", "text": "Built a node-based grade in DaVinci Resolve." },
+        { "title": "Sound", "text": "Designed ambiences, foley and final mix." }
+      ],
+      "gallery": [
+        { "url": "assets/projects/media-echoes.jpg", "caption": "Film still" },
+        { "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ", "caption": "Sample video embed (replace with your film)" },
+        { "url": "assets/projects/media-edit-suite.jpg", "caption": "Grading session" }
+      ],
+      "links": [
+        { "label": "Watch on YouTube", "url": "https://www.youtube.com/" }
+      ],
+      "published": true,
+      "date": "2026-02"
+    },
+    {
+      "id": "pulse-fitness-campaign",
+      "field": "media",
+      "title": "Pulse Fitness — Motion Campaign",
+      "thumbnail": "assets/projects/media-pulse.jpg",
+      "tags": ["Motion Graphics", "After Effects", "Social Media"],
+      "summary": "A high-energy motion campaign for a fitness brand launch across Instagram, TikTok and digital billboards.",
+      "description": "## Overview\nPulse needed a launch campaign that **felt like movement**. I designed a motion language of ribbons and particles that trail every athlete.\n\n## Results\n- **1.2M** organic views in the first two weeks\n- 3.4× engagement versus the brand's previous campaign\n\n## Deliverables\n15s/30s spots, 9:16 stories, and animated billboard loops.",
+      "steps": [
+        { "title": "Concept", "text": "Defined the motion language and style frames." },
+        { "title": "Animation", "text": "Built the ribbon system in After Effects with particle simulations." },
+        { "title": "Versioning", "text": "Adapted for all formats and platforms." }
+      ],
+      "gallery": [
+        { "url": "assets/projects/media-pulse.jpg", "caption": "Key visual" },
+        { "url": "assets/projects/media-edit-suite.jpg", "caption": "Edit & finishing" }
+      ],
+      "links": [
+        { "label": "Campaign reel", "url": "https://vimeo.com/" }
+      ],
+      "published": true,
+      "date": "2025-12"
+    },
+    {
+      "id": "techtalks-podcast",
+      "field": "media",
+      "title": "TechTalks Podcast — Visual System",
+      "thumbnail": "assets/projects/media-podcast.jpg",
+      "tags": ["Brand Identity", "Media", "Social Media"],
+      "summary": "A bold visual identity for a tech podcast: cover art, episode templates and a social content system.",
+      "description": "## Overview\nA modular visual system that lets a small team publish weekly without a designer — while still looking **consistent and bold**.\n\n## Deliverables\n- Podcast cover art\n- Episode, quote and story templates\n- Animated audiograms for social\n- Template handbook for the team",
+      "steps": [
+        { "title": "Identity", "text": "Designed the soundwave-chevron motif and palette." },
+        { "title": "Templates", "text": "Created editable templates for every social format." },
+        { "title": "Handoff", "text": "Trained the team and documented the system." }
+      ],
+      "gallery": [
+        { "url": "assets/projects/media-podcast.jpg", "caption": "Visual system overview" }
+      ],
+      "links": [
+        { "label": "Listen to the podcast", "url": "https://open.spotify.com/" }
+      ],
+      "published": true,
+      "date": "2025-09"
+    }
+  ]
+}

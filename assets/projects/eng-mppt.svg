@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#05101f"/><stop offset="1" stop-color="#0B2343"/></linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#00B4D8" stroke-opacity=".09"/></pattern>
+    <linearGradient id="curve" x1="0" x2="1"><stop offset="0" stop-color="#00B4D8"/><stop offset="1" stop-color="#00CC66"/></linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00CC66" stop-opacity=".35"/><stop offset="1" stop-color="#00CC66" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <!-- axes -->
+  <g stroke="#ECF0F1" stroke-opacity=".5" stroke-width="3"><path d="M160 760 H1460"/><path d="M160 760 V140"/></g>
+  <g font-family="JetBrains Mono, monospace" font-size="28" fill="#ECF0F1" fill-opacity=".6">
+    <text x="1380" y="805">V</text><text x="110" y="160">I</text><text x="1180" y="160" fill="#00CC66" fill-opacity="1">P</text>
+  </g>
+  <!-- I-V curve -->
+  <path d="M160 260 L 900 280 C 1050 290 1120 360 1180 520 S 1240 740 1260 760" fill="none" stroke="#00B4D8" stroke-width="7"/>
+  <!-- P-V curve -->
+  <path d="M160 760 C 500 600 820 380 1010 330 C 1110 310 1170 420 1210 600 L 1260 760" fill="url(#sun)" stroke="url(#curve)" stroke-width="7"/>
+  <!-- MPP -->
+  <g transform="translate(1030 328)">
+    <circle r="40" fill="#00CC66" fill-opacity=".15"><animate attributeName="r" values="22;48;22" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle r="14" fill="#00CC66"/>
+    <path d="M0 0 V432" stroke="#00CC66" stroke-dasharray="10 10" stroke-width="3"/>
+  </g>
+  <g font-family="Space Grotesk, Inter, sans-serif" font-weight="700">
+    <text x="1080" y="300" font-size="40" fill="#00CC66">MPP</text>
+    <text x="210" y="130" font-size="34" fill="#ECF0F1" fill-opacity=".85">Perturb &amp; Observe</text>
+  </g>
+  <!-- buck converter schematic -->
+  <g transform="translate(260 470)" stroke="#00B4D8" stroke-width="4" fill="none" opacity=".9">
+    <path d="M0 0 H80"/><rect x="80" y="-22" width="60" height="44" rx="6"/>
+    <path d="M140 0 H200"/>
+    <path d="M200 0 q15 -30 30 0 q15 -30 30 0 q15 -30 30 0 q15 -30 30 0"/>
+    <path d="M320 0 H400 V40 M380 40 H420 M380 56 H420 M400 56 V120 H0"/>
+    <path d="M170 0 V60 M150 60 H190 L170 90 Z"/>
+    <path d="M170 90 V120"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="24" fill="#00B4D8" opacity=".8"><text x="340" y="440">Q1</text><text x="470" y="440">L 47µH</text></g>
+</svg>
